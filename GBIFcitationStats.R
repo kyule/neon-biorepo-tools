@@ -27,8 +27,7 @@ allDownloads<-data.frame()
 for (i in 1:nrow(NEONdatasets)){
   key<-NEONdatasets$key[i]
   downloadsDataset<-downloadsFunction(key)
-  downloadsDataset<-cbind(rep(NEONdatasets$title[i],nrow(downloadsDataset)),downloadsDataset)
-  names(downloadsDataset)[1]<-"collection"
+  downloadsDataset<-cbind(rep(NEONdatasets$collection[i],nrow(downloadsDataset)),downloadsDataset)
   allDownloads<-rbind(allDownloads,downloadsDataset)
 }
 
