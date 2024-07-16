@@ -17,7 +17,7 @@ find.sampleClass <- function(sampleID){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  avail.data<-avail$data$sampleViews
+  avail.data<-avail$data$sampleClasses
   return(avail.data)
 }
 
