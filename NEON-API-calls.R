@@ -8,7 +8,7 @@ library(jsonlite)
 
 source("/Users/kelsey/Github/neon-biorepo-tools/configini.R")
 
-## ---Functions to find sampleClasses for a given sampleID------------------------------------------------------------------------------------
+## ---Function to find sampleClasses for a given sampleID------------------------------------------------------------------------------------
 
 find.sampleClass <- function(sampleID){
   reqURL<-paste0("http://data.neonscience.org/api/v0/samples/classes?sampleTag=",sampleID,"&apiToken=",Neon_Token)
@@ -17,7 +17,8 @@ find.sampleClass <- function(sampleID){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
 
@@ -33,7 +34,8 @@ view.sampID <- function(sampleID,sampleClass){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
 view.uuid <- function(sampleUuid){
@@ -43,7 +45,8 @@ view.uuid <- function(sampleUuid){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
 view.barcode <- function(sampleCode){
@@ -53,7 +56,8 @@ view.barcode <- function(sampleCode){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
 view.IGSN <- function(IGSN){
@@ -63,14 +67,15 @@ view.IGSN <- function(IGSN){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
 
 
 ## ---Sample Downloads Functions------------------------------------------------------------------------------------
 
-download.sampID <- function(sampleID,sampleClass){
+download.sampID <- function(sampleID,sampleClass,degree){
   reqURL<-paste0("http://data.neonscience.org/api/v0/samples/download?sampleTag=",sampleID,
                  "&sampleClass=",sampleClass,"&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
@@ -78,10 +83,11 @@ download.sampID <- function(sampleID,sampleClass){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
-download.uuid <- function(sampleUuid){
+download.uuid <- function(sampleUuid,degree){
   reqURL<-paste0("http://data.neonscience.org/api/v0/samples/download?sampleUuid=",sampleUuid,
                  "&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
@@ -89,10 +95,11 @@ download.uuid <- function(sampleUuid){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
-download.barcode <- function(sampleCode){
+download.barcode <- function(sampleCode,degree){
   reqURL<-paste0("http://data.neonscience.org/api/v0/samples/download?barcode=",sampleCode,
                  "&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
@@ -100,10 +107,11 @@ download.barcode <- function(sampleCode){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
 
-download.IGSN <- function(IGSN){
+download.IGSN <- function(IGSN,degree){
   reqURL<-paste0("http://data.neonscience.org/api/v0/samples/download?archiveGuid=",IGSN,
                  "&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
@@ -111,5 +119,6 @@ download.IGSN <- function(IGSN){
   avail <- jsonlite::fromJSON(req.text, 
                               simplifyDataFrame=T, 
                               flatten=T)
-  return(avail)
+  avail.data<-avail$data$sampleViews
+  return(avail.data)
 }
