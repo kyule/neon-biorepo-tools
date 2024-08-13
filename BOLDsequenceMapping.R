@@ -61,6 +61,6 @@ newSeqs <- data.frame(occid=matches$id,
                         locus="Cytochrome Oxidase Subunit 1 5' Region",
                         resourceurl=paste0("https://boldsystems.org/index.php/Public_RecordView?processid=",matches$processid),
                         notes=paste0("NEON sampleID: ",matches$sampleID))
-write.csv(seqUpdate,paste0(path,"newOmoccurgenetic.csv"),row.names=FALSE)
+write.csv(newSeqs,paste0(path,"newOmoccurgenetic.csv"),row.names=FALSE)
 
 
