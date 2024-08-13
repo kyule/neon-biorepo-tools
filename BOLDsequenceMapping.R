@@ -47,4 +47,17 @@ seqUpdate <- data.frame(idoccurgenetic=occSeq$idoccurgenetic,
                         locus="Cytochrome Oxidase Subunit 1 5' Region",
                         resourceurl=paste0("https://boldsystems.org/index.php/Public_RecordView?processid=",occSeq$processid),
                         notes=paste0("NEON sampleID: ",occSeq$sampleID))
-write.csv(seqUpdate,paste0(path,"updateExistingOmoccurgenetic.csv"))
+write.csv(seqUpdate,paste0(path,"updateExistingOmoccurgenetic.csv"),row.names=FALSE)
+
+# Load the above into a temporary table in the database and update via sql 
+
+
+# Get new records to load in
+
+matches <- matches[-which(matches$id %in% occSeq$id),]
+newSeqs <- data.frame(occid=matches$id,
+                        identifier=matches$processid,
+                        resourcename="Barcode of Life (BOLD)",
+                        locus="Cytochrome Oxidase Subunit 1 5' Region",
+                        resourceurl=paste0("https://boldsystems.org/index.php/Public_RecordView?processid=",matches$processid),
+                        notes=paste0("NEON sampleID: ",matches$sampleID))
