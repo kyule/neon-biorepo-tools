@@ -3,10 +3,11 @@
 library(dplyr)
 library(tools)
 
-
+# load new personnel file and old one in database
 pers<-read.csv("/Users/kelsey/Library/CloudStorage/GoogleDrive-kmyule@asu.edu/My Drive/NEON Biorepository/Informatics/Collection Updates & Data QA:QC/Personnel/20240814/NEON personnel list.csv")
 old<-read.csv("/Users/kelsey/Library/CloudStorage/GoogleDrive-kmyule@asu.edu/My Drive/NEON Biorepository/Informatics/Collection Updates & Data QA:QC/Personnel/20240814/old NEON personnel list.csv")
 
+# clean many of the fields in both databases
 old[old=="NULL"]<-""
 old$neon_email[which(old$neon_email=="Unknown - added by hand")]<-""
 old$first_name<-trimws(toTitleCase(old$first_name))
@@ -26,7 +27,7 @@ pers<-pers[!duplicated(pers),]
 pers$orcid[which(pers$orcid=="0000-0000-0000-0000")]<-""
 pers$neon_email_address[which(pers$neon_email_address=="Unknown - added by hand")]<-""
 
-
+# create a new data frame from personnel list that is clean and has correct field names
 new<-data.frame(neon_email=trimws(pers$neon_email_address),
                 orcid=trimws(pers$orcid),
                 last_name=trimws(toTitleCase(pers$last_name)),
@@ -39,10 +40,11 @@ new$full_info<-str_replace(new$full_info,"\\n"," ")
 new$neon_email<-tolower(new$neon_email)
 new$dataset<-"new"
 
+# bind old and new databases
 full<-rbind(old,new)
-
 rm(new,pers)
 
+# remove duplicates, the following considers differences in spaces as unimportant when determining duplicates
 nospaces<- full %>%
   mutate(across(where(is.character), ~ str_replace_all(., " ", "")))
 
@@ -50,8 +52,10 @@ full<-full[!duplicated(nospaces[,1:6]),]
 
 rm(nospaces)
 
+# remove dummy record
 full<-full[-which(full$orcid=='1234-1234-1234-1234'),]
 
+# check for records with no email -- if they otherwise match existing records, do not keep them
 no.emails<-full[which(full$neon_email==""),]
 with.emails<-full[which(full$neon_email!=""),]
 
@@ -62,6 +66,9 @@ no.email.match <- anti_join(no.emails,
 full<-rbind(no.email.match,with.emails)
 
 rm(no.emails,no.email.match,with.emails)
+
+
+# check for records with no orcid -- if they otherwise match existing records, do not keep them
 
 no.orcid<-full[which(full$orcid==""),]
 with.orcid<-full[which(full$orcid!=""),]
@@ -74,17 +81,18 @@ full<-rbind(no.orcid.match,with.orcid)
 
 rm(no.orcid,no.orcid.match,with.orcid)
 
+# check for duplicated full info, if those with no email are repeated just remove the ones without emails
 dupe.full.info<-full[full$full_info %in% full$full_info[duplicated(full$full_info)],]
 not.dupe.full.info<-full[-which(full$full_info %in% full$full_info[duplicated(full$full_info)]),]
 
 dupe.full.info.check<-dupe.full.info[which(dupe.full.info$full_info %in% dupe.full.info$full_info[dupe.full.info$neon_email==""]),]
-# if those with no email are repeated just remove the ones without emails
 dupe.full.info.check.rem<-dupe.full.info[-which(dupe.full.info$full_info %in% dupe.full.info$full_info[dupe.full.info$neon_email==""]),]
 
 full<-rbind(dupe.full.info.check.rem,not.dupe.full.info)
 
 rm(dupe.full.info,dupe.full.info.check,not.dupe.full.info,dupe.full.info.check.rem)
 
+# order the results and write to a file
 full<-full[order(full$full_info),]
 
 write.csv(full,"/Users/kelsey/Library/CloudStorage/GoogleDrive-kmyule@asu.edu/My Drive/NEON Biorepository/Informatics/Collection Updates & Data QA:QC/Personnel/20240814/NEON personnel list Updated.csv",row.names=FALSE)
