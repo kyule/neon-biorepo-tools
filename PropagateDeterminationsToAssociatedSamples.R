@@ -39,7 +39,7 @@ newDets<-assoc.ids %>%
          identificationRemarks,taxonRemarks,
          sortSequence,enteredByUid)
 
-# make past IDs for these individuals NOT CURRENT
+# make past IDs for these individuals NOT CURRENT -- go by determination timestamp potentially?
 # update the omoccurrences table as well!
 
 write.csv(newDets,
