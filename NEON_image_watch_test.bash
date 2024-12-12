@@ -155,40 +155,41 @@ while read LINE; do
     FILENAME=$(echo "$LINE" | sed 's|.*/\([^/]*\)$|\1|')
     
     if [[ "$LINE" == General/* ]]; then
-    SUBDIR_PATH=$(dirname "$LINE") # Extract subdirectory structure
+    SUBDIR_PATH=$(dirname "$LINE") # subdirectory
     DEST_PATH="$DESTINATION_ROOT_PATH/$SUBDIR_PATH"
 else
-    COLLECTION_DIR=$(echo "$LINE" | sed 's|/.*$||') # Top-level collection directory
+    COLLECTION_DIR=$(echo "$LINE" | sed 's|/.*$||') # or top level directory
     DEST_PATH="$DESTINATION_ROOT_PATH/$COLLECTION_DIR"
 fi
 
+
     #if [ ! -d "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR" ]
-    if [ ! -d "$DESTINATION_ROOT_PATH/$COLLECTION_DIR" ]
+    if [ ! -d "$DEST_PATH" ]
     then
        #mkdir -p "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR"
-       mkdir -p "$DESTINATION_ROOT_PATH/$COLLECTION_DIR"
+       mkdir -p "$DEST_PATH"
     fi
 
     #if [ ! -f "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR/$FILENAME" ]
-    if [ ! -f "$DESTINATION_ROOT_PATH/$COLLECTION_DIR/$FILENAME" ]
+    if [ ! -f "$DEST_PATH/$FILENAME" ]
     then
         #if move "$SOURCE_ROOT_PATH/$LINE" "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR"
-        if move "$SOURCE_ROOT_PATH/$LINE" "$DESTINATION_ROOT_PATH/$COLLECTION_DIR"
+        if move "$SOURCE_ROOT_PATH/$LINE" "$DEST_PATH"
         then
             count_coll "$COLLECTION_DIR"
         fi
     else
         #if [ $(stat -c %s "$SOURCE_ROOT_PATH/$LINE") -ne 0 ] && [ "$SOURCE_ROOT_PATH/$LINE" -nt $DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR/$FILENAME ]
-        if [ $(stat -c %s "$SOURCE_ROOT_PATH/$LINE") -ne 0 ] && [ "$SOURCE_ROOT_PATH/$LINE" -nt $DESTINATION_ROOT_PATH/$COLLECTION_DIR/$FILENAME ]
+        if [ $(stat -c %s "$SOURCE_ROOT_PATH/$LINE") -ne 0 ] && [ "$SOURCE_ROOT_PATH/$LINE" -nt $DEST_PATH/$FILENAME ]
         then
             #if move "$SOURCE_ROOT_PATH/$LINE" "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR" "OVERWRITE"
-            if move "$SOURCE_ROOT_PATH/$LINE" "$DESTINATION_ROOT_PATH/$COLLECTION_DIR" "OVERWRITE"
+            if move "$SOURCE_ROOT_PATH/$LINE" "$DEST_PATH" "OVERWRITE"
             then
                 count_coll "$COLLECTION_DIR"
             fi
         else
             #echo "Did not move $SOURCE_ROOT_PATH/$LINE - Source files is either empty or modified prior to $DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR/$FILENAME"
-            echo "Did not move $SOURCE_ROOT_PATH/$LINE - Source files is either empty or modified prior to $DESTINATION_ROOT_PATH/$COLLECTION_DIR/$FILENAME"
+            echo "Did not move $SOURCE_ROOT_PATH/$LINE - Source files is either empty or modified prior to $DEST_PATH/$FILENAME"
         fi
     fi
 done <"$TEMPFILE"
