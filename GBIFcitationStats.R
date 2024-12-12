@@ -1,7 +1,7 @@
 library(rgbif)
 library(jsonlite)
 
-date<-"20240521"
+date<-"20241010"
 path<-paste0("/Users/kelsey/Library/CloudStorage/GoogleDrive-kmyule@asu.edu/My Drive/NEON Biorepository/Informatics/GBIF statistics/",date)
 
 litFunction<-function(Key){
