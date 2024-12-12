@@ -160,10 +160,15 @@ while read LINE; do
        #mkdir -p "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR"
        mkdir -p "$DESTINATION_ROOT_PATH/$COLLECTION_DIR"
     fi
-
-    #if [ ! -f "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR/$FILENAME" ]
-    if [ ! -f "$DESTINATION_ROOT_PATH/$COLLECTION_DIR/$FILENAME" ]
+    
+    if [[ "$SOURCE_ROOT_PATH/$LINE" == *"/General/"* ]];
     then
+        echo "Did not move $SOURCE_ROOT_PATH/$LINE"
+        count_coll "$COLLECTION_DIR"
+    else
+        #if [ ! -f "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR/$FILENAME" ]
+        if [ ! -f "$DESTINATION_ROOT_PATH/$COLLECTION_DIR/$FILENAME" ]
+        then
         #if move "$SOURCE_ROOT_PATH/$LINE" "$DESTINATION_ROOT_PATH/$INSTITUTION_DIR/$COLLECTION_DIR"
         if move "$SOURCE_ROOT_PATH/$LINE" "$DESTINATION_ROOT_PATH/$COLLECTION_DIR"
         then
