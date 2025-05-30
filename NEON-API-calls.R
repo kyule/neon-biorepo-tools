@@ -11,7 +11,8 @@ source("/Users/kelsey/Github/neon-biorepo-tools/configini.R")
 ## ---Function to find sampleClasses for a given sampleID------------------------------------------------------------------------------------
 
 find.sampleClass <- function(sampleID){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/classes?sampleTag=",sampleID,"&apiToken=",Neon_Token)
+  encoded_sampleID <- URLencode(sampleID, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/classes?sampleTag=",encoded_sampleID,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
@@ -27,8 +28,10 @@ find.sampleClass <- function(sampleID){
 # Functions to request data using the GET function & the API call & Make the data readable by jsonlite & flatten into list
 
 view.sampID <- function(sampleID,sampleClass){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/view?sampleTag=",sampleID,
-              "&sampleClass=",sampleClass,"&apiToken=",Neon_Token)
+  encoded_sampleID <- URLencode(sampleID, reserved = TRUE)
+  encoded_sampleClass <- URLencode(sampleClass, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/view?sampleTag=", encoded_sampleID,
+              "&sampleClass=",encoded_sampleClass,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
@@ -39,7 +42,8 @@ view.sampID <- function(sampleID,sampleClass){
 }
 
 view.uuid <- function(sampleUuid){
-  reqURL<-paste0("http://data.neonscience.org/api/v0/samples/view?sampleUuid=",sampleUuid,"&apiToken=",Neon_Token)
+  encoded_sampleUuid <- URLencode(sampleUuid, reserved = TRUE)
+  reqURL<-paste0("http://data.neonscience.org/api/v0/samples/view?sampleUuid=",encoded_sampleUuid,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
@@ -50,7 +54,8 @@ view.uuid <- function(sampleUuid){
 }
 
 view.barcode <- function(sampleCode){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/view?barcode=",sampleCode,"&apiToken=",Neon_Token)
+  encoded_sampleCode <- URLencode(sampleCode, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/view?barcode=",encoded_sampleCode,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
@@ -61,7 +66,8 @@ view.barcode <- function(sampleCode){
 }
 
 view.IGSN <- function(IGSN){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/view?archiveGuid=",IGSN,"&apiToken=",Neon_Token)
+  encoded_IGSN <- URLencode(IGSN, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/view?archiveGuid=",encoded_IGSN,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
@@ -76,8 +82,10 @@ view.IGSN <- function(IGSN){
 ## ---Sample Downloads Functions------------------------------------------------------------------------------------
 
 download.sampID <- function(sampleID,sampleClass,degree){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?sampleTag=",sampleID,
-                 "&sampleClass=",sampleClass,"&degree=",degree,"&apiToken=",Neon_Token)
+  encoded_sampleID <- URLencode(sampleID, reserved = TRUE)
+  encoded_sampleClass <- URLencode(sampleClass, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?sampleTag=",encoded_sampleID,
+                 "&sampleClass=",encoded_sampleClass,"&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
@@ -87,8 +95,9 @@ download.sampID <- function(sampleID,sampleClass,degree){
   return(avail.data)
 }
 
-download.uuid <- function(sampleUuid,degree){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?sampleUuid=",sampleUuid,
+download.uuid <- function(encoded_sampleUuid,degree){
+  encoded_sampleUuid <- URLencode(sampleUuid, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?sampleUuid=",encoded_sampleUuid,
                  "&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
@@ -100,7 +109,8 @@ download.uuid <- function(sampleUuid,degree){
 }
 
 download.barcode <- function(sampleCode,degree){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?barcode=",sampleCode,
+  encoded_sampleCode <- URLencode(sampleCode, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?barcode=",encoded_sampleCode,
                  "&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
@@ -112,7 +122,8 @@ download.barcode <- function(sampleCode,degree){
 }
 
 download.IGSN <- function(IGSN,degree){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?archiveGuid=",IGSN,
+  encoded_IGSN <- URLencode(IGSN, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/samples/download?archiveGuid=",encoded_IGSN,
                  "&degree=",degree,"&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
@@ -127,7 +138,8 @@ download.IGSN <- function(IGSN,degree){
 ## ---Function to find location properties for a given location ID------------------------------------------------------------------------------------
 
 view.locations <- function(locationID){
-  reqURL<-paste0("https://data.neonscience.org/api/v0/locations/",locationID,"?history=true&apiToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2RhdGEubmVvbnNjaWVuY2Uub3JnL2FwaS92MC8iLCJzdWIiOiJuZW9uLWJpb3JlcG8tc2VydmljZSIsInNjb3BlIjoibmVvbjpzZXJ2aWNlIHJlYWQ6c2FtcGxlcyByZWFkOnNhbXBsZXMtdGF4YSByb2xlOmJpb3JlcG8iLCJpc3MiOiJodHRwczovL2RhdGEubmVvbnNjaWVuY2Uub3JnLyIsImlhdCI6MTYyMDEzOTc3Nn0.84h3ungTPAQnak_GGiZuerlP_tseJTapJ7M0q3Losk98fVg4EDzFnkKFFhWNlPiRthBbjLx7r2gdbZEQYhDkfA")
+  encoded_locationID <- URLencode(locationID, reserved = TRUE)
+  reqURL<-paste0("https://data.neonscience.org/api/v0/locations/",encoded_locationID,"?history=true&apiToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2RhdGEubmVvbnNjaWVuY2Uub3JnL2FwaS92MC8iLCJzdWIiOiJuZW9uLWJpb3JlcG8tc2VydmljZSIsInNjb3BlIjoibmVvbjpzZXJ2aWNlIHJlYWQ6c2FtcGxlcyByZWFkOnNhbXBsZXMtdGF4YSByb2xlOmJpb3JlcG8iLCJpc3MiOiJodHRwczovL2RhdGEubmVvbnNjaWVuY2Uub3JnLyIsImlhdCI6MTYyMDEzOTc3Nn0.84h3ungTPAQnak_GGiZuerlP_tseJTapJ7M0q3Losk98fVg4EDzFnkKFFhWNlPiRthBbjLx7r2gdbZEQYhDkfA")
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
