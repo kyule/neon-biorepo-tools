@@ -139,7 +139,7 @@ download.IGSN <- function(IGSN,degree){
 
 view.locations <- function(locationID){
   encoded_locationID <- URLencode(locationID, reserved = TRUE)
-  reqURL<-paste0("https://data.neonscience.org/api/v0/locations/",encoded_locationID,"?history=true&apiToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2RhdGEubmVvbnNjaWVuY2Uub3JnL2FwaS92MC8iLCJzdWIiOiJuZW9uLWJpb3JlcG8tc2VydmljZSIsInNjb3BlIjoibmVvbjpzZXJ2aWNlIHJlYWQ6c2FtcGxlcyByZWFkOnNhbXBsZXMtdGF4YSByb2xlOmJpb3JlcG8iLCJpc3MiOiJodHRwczovL2RhdGEubmVvbnNjaWVuY2Uub3JnLyIsImlhdCI6MTYyMDEzOTc3Nn0.84h3ungTPAQnak_GGiZuerlP_tseJTapJ7M0q3Losk98fVg4EDzFnkKFFhWNlPiRthBbjLx7r2gdbZEQYhDkfA")
+  reqURL<-paste0("https://data.neonscience.org/api/v0/locations/",encoded_locationID,"?history=true&apiToken=",Neon_Token)
   req<-GET(reqURL)
   req.text <- content(req, as="text")
   avail <- jsonlite::fromJSON(req.text, 
