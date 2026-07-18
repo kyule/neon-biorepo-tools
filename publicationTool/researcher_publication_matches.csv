@@ -1,0 +1,181 @@
+work_id,author_name,author_lower,min_distance,matched_researcher
+https://openalex.org/W2127597920,John L. Orrock,john l. orrock,0.07142857142857152,John Orrock
+https://openalex.org/W2802282671,Jonathan A. Coddington,jonathan a. coddington,0.04545454545454547,Jonathan Coddington
+https://openalex.org/W2802282671,Stephen Richards,stephen richards,0.08333333333333338,Stephen Rich
+https://openalex.org/W1964255443,Nico M. Franz,nico m. franz,0.076923076923077,Nico Franz
+https://openalex.org/W1964255443,Pankaj Jaiswal,pankaj jaiswal,5.551115123125783e-17,Pankaj Jaiswal
+https://openalex.org/W1964255443,Hilmar Lapp,hilmar lapp,5.551115123125783e-17,Hilmar Lapp
+https://openalex.org/W1964255443,Anne Thessen,anne thessen,5.551115123125783e-17,Anne Thessen
+https://openalex.org/W1964255443,Paula Mabee,paula mabee,5.551115123125783e-17,Paula Mabee
+https://openalex.org/W2604558145,Kipling Will,kipling will,5.551115123125783e-17,Kipling Will
+https://openalex.org/W3118611023,Michael W. Belitz,michael w. belitz,0.058823529411764844,Michael Belitz
+https://openalex.org/W3012679073,Songlin Fei,songlin fei,5.551115123125783e-17,Songlin Fei
+https://openalex.org/W2999380211,Maggie M. Hantak,maggie m. hantak,0.06250000000000006,Maggie Hantak
+https://openalex.org/W2999380211,Bryan S. McLean,bryan s. mclean,0.06666666666666678,Bryan McLean
+https://openalex.org/W2999380211,Michael W. Belitz,michael w. belitz,0.058823529411764844,Michael Belitz
+https://openalex.org/W2999747982,John Young,john young,0.09393939393939396,John Yunger
+https://openalex.org/W3193955572,Maggie M. Hantak,maggie m. hantak,0.06250000000000006,Maggie Hantak
+https://openalex.org/W3193955572,Bryan S. McLean,bryan s. mclean,0.06666666666666678,Bryan McLean
+https://openalex.org/W4200014392,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W4200014392,Katharyn Duffy,katharyn duffy,5.551115123125783e-17,Katharyn Duffy
+https://openalex.org/W4200014392,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4391777429,Quan Zhang,quan zhang,0.09393939393939396,Susan Zhang
+https://openalex.org/W3106537818,Jarrett D. Blair,jarrett d. blair,0.06250000000000006,Jarrett Blair
+https://openalex.org/W3106537818,Michael D. Weiser,michael d. weiser,0.058823529411764844,Michael Weiser
+https://openalex.org/W3106537818,Michael Kaspari,michael kaspari,5.551115123125783e-17,Michael Kaspari
+https://openalex.org/W3106537818,Matthew J. Miller,matthew j. miller,0.058823529411764844,Matthew Miller
+https://openalex.org/W3106537818,Cameron D. Siler,cameron d. siler,0.06250000000000006,Cameron Siler
+https://openalex.org/W3106537818,Katie E. Marshall,katie e. marshall,0.058823529411764844,Katie Marshall
+https://openalex.org/W4308343002,Emma Hauser,emma hauser,5.551115123125783e-17,Emma Hauser
+https://openalex.org/W2528697187,Jessica E. Light,jessica e. light,0.06250000000000006,Jessica Light
+https://openalex.org/W2791468862,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W2791468862,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W2791468862,Benjamin Baiser,benjamin baiser,5.551115123125783e-17,Benjamin Baiser
+https://openalex.org/W2791468862,Angela L. Strecker,angela l. strecker,0.05555555555555556,Angela Strecker
+https://openalex.org/W4380357248,Songlin Fei,songlin fei,5.551115123125783e-17,Songlin Fei
+https://openalex.org/W2102937261,Kate E. Langwig,kate e. langwig,0.06666666666666678,Kate Langwig
+https://openalex.org/W2396795028,Michael Begon,michael begon,0.07905982905982913,Michael Bogan
+https://openalex.org/W2396795028,Rebecca J. Eisen,rebecca j. eisen,0.06250000000000006,Rebecca Eisen
+https://openalex.org/W2396795028,Shannon L. LaDeau,shannon l. ladeau,0.058823529411764844,Shannon LaDeau
+https://openalex.org/W3195828329,Kai Zhu,kai zhu,5.551115123125783e-17,Kai Zhu
+https://openalex.org/W4225417662,Paula Mabee,paula mabee,5.551115123125783e-17,Paula Mabee
+https://openalex.org/W4225417662,Melissa A. Genazzio,melissa a. genazzio,0.09429824561403516,Melissa Genazzio
+https://openalex.org/W3032734105,Maggie M. Hantak,maggie m. hantak,0.06250000000000006,Maggie Hantak
+https://openalex.org/W3032734105,Bryan S. McLean,bryan s. mclean,0.06666666666666678,Bryan McLean
+https://openalex.org/W2418090461,Shannon L. LaDeau,shannon l. ladeau,0.058823529411764844,Shannon LaDeau
+https://openalex.org/W2179880336,Lee F. Stanish,lee f. stanish,0.07142857142857152,Lee Stanish
+https://openalex.org/W4389740163,Kelsey M. Yule,kelsey m. yule,0.07142857142857152,Kelsey Yule
+https://openalex.org/W4389740163,Nico M. Franz,nico m. franz,0.076923076923077,Nico Franz
+https://openalex.org/W4389740163,Paula Mabee,paula mabee,5.551115123125783e-17,Paula Mabee
+https://openalex.org/W2550387562,Shannon L. LaDeau,shannon l. ladeau,0.058823529411764844,Shannon LaDeau
+https://openalex.org/W3172144611,Melissa A. Genazzio,melissa a. genazzio,0.09429824561403516,Melissa Genazzio
+https://openalex.org/W4225279953,Kai Zhu,kai zhu,5.551115123125783e-17,Kai Zhu
+https://openalex.org/W4286249400,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4286249400,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W4286249400,Sarah K. Thomsen,sarah k. thomsen,0.06250000000000006,Sarah Thomsen
+https://openalex.org/W4286249400,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W3131719683,Kai Zhu,kai zhu,5.551115123125783e-17,Kai Zhu
+https://openalex.org/W4280489010,Sara H. Paull,sara h. paull,0.076923076923077,Sara Paull
+https://openalex.org/W4387409362,John Soghigian,john soghigian,5.551115123125783e-17,John Soghigian
+https://openalex.org/W4387409362,Michelle Trautwein,michelle trautwein,5.551115123125783e-17,Michelle Trautwein
+https://openalex.org/W4387409362,Yvonne‐Marie Linton,yvonne‐marie linton,0.03508771929824578,Yvonne-Marie Linton
+https://openalex.org/W4387409362,Michael H. Reiskind,michael h. reiskind,0.05263157894736849,Michael Reiskind
+https://openalex.org/W3213720235,Kelsey M. Yule,kelsey m. yule,0.07142857142857152,Kelsey Yule
+https://openalex.org/W4399861224,Janet Jansson,janet jansson,5.551115123125783e-17,Janet Jansson
+https://openalex.org/W4399861224,Jason McDermott,jason mcdermott,5.551115123125783e-17,Jason McDermott
+https://openalex.org/W4399861224,Jeffrey L. Blanchard,jeffrey l. blanchard,0.069607843137255,Jeffrey Blanchard
+https://openalex.org/W4399861224,Katherine A. Dynarski,katherine a. dynarski,0.0846560846560847,Katherine Dynarski
+https://openalex.org/W4391028454,Rudolf Meier,rudolf meier,5.551115123125783e-17,Rudolf Meier
+https://openalex.org/W2791473463,Ed Gilbert,ed gilbert,5.551115123125783e-17,Ed Gilbert
+https://openalex.org/W1809269061,Rebecca J. Eisen,rebecca j. eisen,0.06250000000000006,Rebecca Eisen
+https://openalex.org/W4387058357,Ben Dantzer,ben dantzer,5.551115123125783e-17,Ben Dantzer
+https://openalex.org/W4387058357,Katie McCain,katie mccain,0.07905982905982913,Kailey McCain
+https://openalex.org/W4387058357,Sara H. Paull,sara h. paull,0.076923076923077,Sara Paull
+https://openalex.org/W4387058357,Heather L. Throop,heather l. throop,0.058823529411764844,Heather Throop
+https://openalex.org/W4387058357,Lynn B. Martin,lynn b. martin,0.07142857142857152,Lynn Martin
+https://openalex.org/W3127260139,Songlin Fei,songlin fei,5.551115123125783e-17,Songlin Fei
+https://openalex.org/W4311107783,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W1484479108,John Cook,john cook,0.09764309764309766,John Orrock
+https://openalex.org/W2903682667,Bryan S. McLean,bryan s. mclean,0.06666666666666678,Bryan McLean
+https://openalex.org/W2903682667,Bryan S. McLean,bryan s. mclean,0.06666666666666678,Bryan McLean
+https://openalex.org/W2589663725,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W2589663725,Benjamin Baiser,benjamin baiser,5.551115123125783e-17,Benjamin Baiser
+https://openalex.org/W2589663725,Angela L. Strecker,angela l. strecker,0.05555555555555556,Angela Strecker
+https://openalex.org/W2589663725,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W2885673741,Eugene F. Kelly,eugene f. kelly,0.06666666666666678,Eugene Kelly
+https://openalex.org/W4309491481,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4309491481,Katharyn Duffy,katharyn duffy,5.551115123125783e-17,Katharyn Duffy
+https://openalex.org/W4309491481,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W2256371263,David Toledo,david toledo,5.551115123125783e-17,David Toledo
+https://openalex.org/W4308507701,Sara H. Paull,sara h. paull,0.076923076923077,Sara Paull
+https://openalex.org/W4214767684,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4390945514,Jarrett D. Blair,jarrett d. blair,0.06250000000000006,Jarrett Blair
+https://openalex.org/W4390945514,Katie E. Marshall,katie e. marshall,0.058823529411764844,Katie Marshall
+https://openalex.org/W3094378917,Beckett Sterner,beckett sterner,5.551115123125783e-17,Beckett Sterner
+https://openalex.org/W3094378917,Nico M. Franz,nico m. franz,0.076923076923077,Nico Franz
+https://openalex.org/W4387949433,Elise F. Zipkin,elise f. zipkin,0.06666666666666678,Elise Zipkin
+https://openalex.org/W3046595318,Michelle E. Afkhami,michelle e. afkhami,0.05263157894736849,Michelle Afkhami
+https://openalex.org/W2415535918,John N. Parker,john n. parker,0.07142857142857152,John Parker
+https://openalex.org/W3126079966,Songlin Fei,songlin fei,5.551115123125783e-17,Songlin Fei
+https://openalex.org/W3109795609,Zacchaeus G. Compson,zacchaeus g. compson,0.069607843137255,Zaccheaus Compson
+https://openalex.org/W3127914840,Songlin Fei,songlin fei,5.551115123125783e-17,Songlin Fei
+https://openalex.org/W4320895634,Justin P. F. Pomeranz,justin p. f. pomeranz,0.09523809523809525,Justin Pomeranz
+https://openalex.org/W3127262493,Melissa A. Genazzio,melissa a. genazzio,0.09429824561403516,Melissa Genazzio
+https://openalex.org/W4378801980,Desirée L. Narango,desirée l. narango,0.0962962962962963,Desiree Narango
+https://openalex.org/W2956755613,Marco Cantonati,marco cantonati,5.551115123125783e-17,Marco Cantonati
+https://openalex.org/W4200308939,Elizabeth La Rue,elizabeth la rue,0.06388888888888886,Elizabeth LaRou
+https://openalex.org/W4386201130,Paula Mabee,paula mabee,5.551115123125783e-17,Paula Mabee
+https://openalex.org/W4377012406,John D. Parker,john d. parker,0.07142857142857152,John Parker
+https://openalex.org/W3200916956,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W3200916956,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W3200916956,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W4393009854,Justin P. F. Pomeranz,justin p. f. pomeranz,0.09523809523809525,Justin Pomeranz
+https://openalex.org/W3171818819,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W4413963077,Alyson East,alyson east,5.551115123125783e-17,Alyson East
+https://openalex.org/W4413963077,Elizabeth Campolongo,elizabeth campolongo,5.551115123125783e-17,Elizabeth Campolongo
+https://openalex.org/W4413963077,S M Rayeed,s m rayeed,0.07037037037037047,SM Rayeed
+https://openalex.org/W4413963077,Samuel Stevens,samuel stevens,5.551115123125783e-17,Samuel Stevens
+https://openalex.org/W4413963077,Scott Lowe,scott lowe,5.551115123125783e-17,Scott Lowe
+https://openalex.org/W4413963077,Kayla I. Perry,kayla i. perry,0.07142857142857152,Kayla Perry
+https://openalex.org/W4413963077,Matthew B. Thompson,matthew b. thompson,0.05263157894736849,Matthew Thompson
+https://openalex.org/W4413963077,Hilmar Lapp,hilmar lapp,5.551115123125783e-17,Hilmar Lapp
+https://openalex.org/W4413963077,Paula Mabee,paula mabee,5.551115123125783e-17,Paula Mabee
+https://openalex.org/W4413963077,Graham W. Taylor,graham w. taylor,0.06250000000000006,Graham Taylor
+https://openalex.org/W4413963077,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4247877597,Rebecca Even,rebecca even,0.07905982905982913,Rebecca Eisen
+https://openalex.org/W4327862370,Michelle E. Afkhami,michelle e. afkhami,0.05263157894736849,Michelle Afkhami
+https://openalex.org/W2509141605,Michael Bahn,michael bahn,0.07905982905982913,Michael Bogan
+https://openalex.org/W4367366123,Rudolf Meier,rudolf meier,5.551115123125783e-17,Rudolf Meier
+https://openalex.org/W4387968483,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W2130861846,Hilmar Lapp,hilmar lapp,5.551115123125783e-17,Hilmar Lapp
+https://openalex.org/W3081949175,Fay‐Wei Li,fay‐wei li,0.06666666666666678,Fay-Wei Li
+https://openalex.org/W4384465874,Seth D. Newsome,seth d. newsome,0.06666666666666678,Seth Newsome
+https://openalex.org/W4313325357,Bryan S. McLean,bryan s. mclean,0.06666666666666678,Bryan McLean
+https://openalex.org/W4322737768,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4324339071,Justin P. F. Pomeranz,justin p. f. pomeranz,0.09523809523809525,Justin Pomeranz
+https://openalex.org/W4394595011,Quan Zhang,quan zhang,0.09393939393939396,Susan Zhang
+https://openalex.org/W3174750487,Michael H. Reiskind,michael h. reiskind,0.05263157894736849,Michael Reiskind
+https://openalex.org/W4205569068,Paula Mabee,paula mabee,5.551115123125783e-17,Paula Mabee
+https://openalex.org/W4205569068,Melissa A. Genazzio,melissa a. genazzio,0.09429824561403516,Melissa Genazzio
+https://openalex.org/W3201230416,Jarrett D. Blair,jarrett d. blair,0.06250000000000006,Jarrett Blair
+https://openalex.org/W3201230416,Michael D. Weiser,michael d. weiser,0.058823529411764844,Michael Weiser
+https://openalex.org/W3201230416,Michael Kaspari,michael kaspari,5.551115123125783e-17,Michael Kaspari
+https://openalex.org/W3201230416,Cameron D. Siler,cameron d. siler,0.06250000000000006,Cameron Siler
+https://openalex.org/W3201230416,Katie E. Marshall,katie e. marshall,0.058823529411764844,Katie Marshall
+https://openalex.org/W3048489145,Thea Whitman,thea whitman,5.551115123125783e-17,Thea Whitman
+https://openalex.org/W3130395017,Michael Cox,michael cox,0.08585858585858598,Michael Cove
+https://openalex.org/W3093302691,Justin P. F. Pomeranz,justin p. f. pomeranz,0.09523809523809525,Justin Pomeranz
+https://openalex.org/W4381550223,John D. Parker,john d. parker,0.07142857142857152,John Parker
+https://openalex.org/W4364358221,Quan Zhang,quan zhang,0.09393939393939396,Susan Zhang
+https://openalex.org/W4390765346,Justin P. F. Pomeranz,justin p. f. pomeranz,0.09523809523809525,Justin Pomeranz
+https://openalex.org/W4392820514,Michael Kaspari,michael kaspari,5.551115123125783e-17,Michael Kaspari
+https://openalex.org/W4392820514,Michael D. Weiser,michael d. weiser,0.058823529411764844,Michael Weiser
+https://openalex.org/W4392820514,Cameron D. Siler,cameron d. siler,0.06250000000000006,Cameron Siler
+https://openalex.org/W4392820514,Katie E. Marshall,katie e. marshall,0.058823529411764844,Katie Marshall
+https://openalex.org/W4384661215,Beckett Sterner,beckett sterner,5.551115123125783e-17,Beckett Sterner
+https://openalex.org/W4384661215,Nico M. Franz,nico m. franz,0.076923076923077,Nico Franz
+https://openalex.org/W3015052308,Katrina M. Dlugosch,katrina m. dlugosch,0.05263157894736849,Katrina Dlugosch
+https://openalex.org/W4392653682,Davide Dal Pos,davide dal pos,5.551115123125783e-17,Davide Dal Pos
+https://openalex.org/W3175652825,Beckett Sterner,beckett sterner,5.551115123125783e-17,Beckett Sterner
+https://openalex.org/W3175652825,Ed Gilbert,ed gilbert,5.551115123125783e-17,Ed Gilbert
+https://openalex.org/W3175652825,Nico M. Franz,nico m. franz,0.076923076923077,Nico Franz
+https://openalex.org/W2954654534,Naoru Koizumi,naoru koizumi,5.551115123125783e-17,Naoru Koizumi
+https://openalex.org/W4390946494,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W4236875008,M Jones,m jones,0.09999999999999999,Matt Jones
+https://openalex.org/W4394910354,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4394910354,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W4394910354,Sarah K. Thomsen,sarah k. thomsen,0.06250000000000006,Sarah Thomsen
+https://openalex.org/W4394910354,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W4252311142,Melissa A. Genazzio,melissa a. genazzio,0.09429824561403516,Melissa Genazzio
+https://openalex.org/W3204278181,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W4308516213,John D. Parker,john d. parker,0.07142857142857152,John Parker
+https://openalex.org/W4313322255,A Bailey,a bailey,0.09090909090909088,Ezra Bailey
+https://openalex.org/W4385270908,Sara H. Paull,sara h. paull,0.076923076923077,Sara Paull
+https://openalex.org/W4303475945,Sydne Record,sydne record,5.551115123125783e-17,Sydne Record
+https://openalex.org/W4303475945,Phoebe L. Zarnetske,phoebe l. zarnetske,0.05263157894736849,Phoebe Zarnetske
+https://openalex.org/W4303475945,Eric R. Sokol,eric r. sokol,0.076923076923077,Eric Sokol
+https://openalex.org/W4391338261,Benjamin Baiser,benjamin baiser,5.551115123125783e-17,Benjamin Baiser
+https://openalex.org/W4236011733,Jeffrey Welker,jeffrey welker,0.09523809523809525,Jeffrey Wesner
+https://openalex.org/W4255665638,Jeffrey Welker,jeffrey welker,0.09523809523809525,Jeffrey Wesner
+https://openalex.org/W2957282111,Benjamin Brede,benjamin brede,0.0992063492063492,Benjamin Lee
+https://openalex.org/W2890488408,Eugene F. Kelly,eugene f. kelly,0.06666666666666678,Eugene Kelly
